@@ -1,7 +1,7 @@
 # fuerza_aerea
 
 "Fuerza Aérea" es una repositorio creado para dar respuesta al Trabajo Práctico Especial de la materia Web 2 de la carrera TUDAI dicatada en la facultada de Exactas de la UNICEN.
-Sus desarrolladores, Nicolás Mateo (lordnicolas2) y Guillermo Castiglioni (GuilleAlbCasti), proponen diseñar una base de datos que pueda almacenar un conjunto de elementos clasificados en categorías y consecuentemente con un subconjunto de detalles a fin de que sea expuesta y administrada vía web.
+Sus desarrolladores, Nicolás Mateos (lordnicolas2) y Guillermo Castiglioni (GuilleAlbCasti), proponen diseñar una base de datos que pueda almacenar un conjunto de elementos clasificados en categorías y consecuentemente con un subconjunto de detalles a fin de que sea expuesta y administrada vía web.
 La temática elegida crea un marco "ficticio" en donde se logre aplicar los distintos requerimientos exigidos para alcanzar la aprobación en éste. En tal sentido, hemos buscado catalogar la diversidad de aeronaves que pueden llegar a conformar una fuerza aérea generando un entorno creativo para la creación de diversos objetos de elementos interrelacionados para poner en práctica los contenidos aprendidos en la materia.
 
 Otros aspectos:
