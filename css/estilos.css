@@ -1,0 +1,35 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(135,154,184);
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+header {
+    flex-direction: row;
+    gap: 40px;
+}
+
+main {
+    height: 460px;
+    background-color: aliceblue;
+}
+
+footer {
+    flex-direction: column;
+    height: 40px;
+}
+
+.logo {
+    height: 140px;
+    margin-top: 0px;
+}
