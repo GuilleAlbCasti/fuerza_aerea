@@ -26,6 +26,16 @@ function traer_base($id_base) {
     return $query->fetch(PDO::FETCH_OBJ);
 }
 
+// BUSCAR BASE AÉREA POR NOMBRE
+
+function buscar_nombre_base($letras) {
+    $db = conexion_bd();
+    $query = $db->prepare('SELECT * FROM base WHERE FIELD_A LIKE letras = ?');
+    $query->execute(array('%.$letras.%'));
+
+    return $query->fetch(PDO::FETCH_OBJ);
+}
+
 // OBTENER LISTA DE AVIONES
 
 function traer_aviones() {
@@ -46,3 +56,12 @@ function traer_avion($id_avion) {
     return $query->fetch(PDO::FETCH_OBJ);
 }
 
+// BUSCAR AVION POR MODELO
+
+function buscar_modelo_avion($letras) {
+    $db = conexion_bd();
+    $query = $db->prepare('SELECT * FROM avion WHERE FIELD_A LIKE letras = ?');
+    $query->execute(array('%.$letras.%'));
+
+    return $query->fetch(PDO::FETCH_OBJ);
+}
