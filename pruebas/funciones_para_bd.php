@@ -50,7 +50,7 @@ function traer_aviones() {
 
 function traer_avion($id_avion) {
     $db = conexion_bd();
-    $query = $db->prepare('SELECT * FROM avion WHERE id_avion = ?');
+    $query = $db->prepare('SELECT * FROM avion WHERE id = ?');
     $query->execute(array($id_avion));
 
     return $query->fetch(PDO::FETCH_OBJ);
