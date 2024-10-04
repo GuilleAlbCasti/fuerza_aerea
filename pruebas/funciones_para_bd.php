@@ -40,7 +40,7 @@ function buscar_nombre_base($letras) {
 
 function traer_aviones() {
     $db = conexion_bd();
-    $query = $db->prepare('SELECT * FROM avion ORDER BY modelo ASC');
+    $query = $db->prepare('SELECT avion.modelo, avion.anio, avion.origen, avion.horas_vuelo, base.nombre as base_nombre FROM avion INNER JOIN base ON avion.base_fk = base.id ORDER BY modelo ASC');
     $query->execute();
 
     return $query->fetchAll(PDO::FETCH_OBJ);
