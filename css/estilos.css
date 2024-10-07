@@ -14,7 +14,7 @@ body {
     background-color: rgb(135,154,184);
 }
 
-header, footer, .titulo-contenedor, main,.opcion-contenedor {
+header, footer, .titulo-contenedor, main,.opcion-contenedor, .main-listados {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,12 +65,12 @@ nav ul li a:active {
     margin-top: 0px;
 }
 
- /* -------------- ESTILOS DEL MAIN ---------------- */
+ /* -------------- ESTILOS DEL MAIN "HOME"---------------- */
 
 main {
     flex: 1;
     width: 100vw;
-    height: 412px;
+    min-height: calc(100vh - 190px);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bandera_argentina.webp);
     background-size: cover;
     background-position: center;

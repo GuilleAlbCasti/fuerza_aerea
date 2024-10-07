@@ -19,7 +19,7 @@ echo '
             <nav class="menu-barra">
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <li><a href="">BASES</a></li>
+                    <li><a href="templates/bases.php">BASES</a></li>
                     <li><a href="">AVIONES</a></li>
                     <li><a href="">INGRESAR</a></li>
                 </ul>
