@@ -7,9 +7,9 @@ echo '
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fuerza Aérea</title>
-        <link rel="stylesheet" href="css/estilos.css">
-        <link rel="stylesheet" href="../css/estilos-fichero.css">
-        <link rel="stylesheet" href="../css/estilos-tablas.css">
+        <link rel="stylesheet" href="/fuerza_aerea/css/estilos.css">
+        <link rel="stylesheet" href="/fuerza_aerea/css/estilos-fichero.css">
+        <link rel="stylesheet" href="/fuerza_aerea/css/estilos-tablas.css">
     </head>
     <body>
         <header>
@@ -20,9 +20,9 @@ echo '
             <div class="menu-contenedor">
                 <nav class="menu-barra">
                     <ul>
-                        <li><a href="/index.php">HOME</a></li>
-                        <li><a href="../templates/bases.php">BASES</a></li>
-                        <li><a href="../templates/aviones.php">AVIONES</a></li>
+                        <li><a href="/fuerza_aerea/index.php">HOME</a></li>
+                        <li><a href="/fuerza_aerea/templates/bases.php">BASES</a></li>
+                        <li><a href="/fuerza_aerea/templates/aviones.php">AVIONES</a></li>
                         <li><a href="#">INGRESAR</a></li>
                     </ul>
                 </nav>

@@ -1,10 +1,11 @@
 <?php
-require_once '../templates/header.php';
-require_once '../funciones/showListarBases.php';
+
+require_once '/fuerza_aerea/templates/header.php';
+require_once '/fuerza_aerea/funciones/showListarBases.php';
 
 echo '
     <main>';
         echo showListarBases();
         echo '
     </main>';
-require_once '../templates/footer.php';
+require_once '/fuerza_aerea/templates/footer.php';
