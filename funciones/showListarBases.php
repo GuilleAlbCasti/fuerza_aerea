@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../pruebas/funciones_para_bd.php';
+    require_once 'funciones_para_bd.php';
 
     function showListarBases() {
 

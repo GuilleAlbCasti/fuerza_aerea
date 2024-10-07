@@ -45,7 +45,7 @@
 }
 
 .main-listados-tabla tbody td {
-    background-color: #fafafa; /* Cambia esto si es necesario */
+    background-color: #fafafa; 
     position: relative;
     z-index: 1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -58,7 +58,7 @@
 
 /* Efecto hover en filas */
 .main-listados-tabla tbody tr:hover td {
-    background-color: #f0f0f0; /* Efecto hover claro */
+    background-color: #f0f0f0;
     transform: translateY(-2px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -70,6 +70,6 @@
 }
 
 .main-listados-tabla td:hover {
-    background-color: #e6e6e6; /* Efecto hover claro */
+    background-color: #e6e6e6;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
