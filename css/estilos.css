@@ -14,7 +14,13 @@ body {
     background-color: rgb(135,154,184);
 }
 
-header, footer, .titulo-contenedor, main,.opcion-contenedor, .main-listados {
+header,
+main, 
+footer, 
+.titulo-contenedor, 
+.opcion-contenedor, 
+.main-listados, 
+.contenedor-fichero {
     display: flex;
     justify-content: center;
     align-items: center;

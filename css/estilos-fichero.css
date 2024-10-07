@@ -1,0 +1,78 @@
+/* Estilos para el contenedor principal del fichero */
+.contenedor-fichero {
+    justify-content: space-around;
+    margin: 40px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilos para la sección de la información del avión */
+.contenedor-fichero-info {
+    flex: 1;
+    padding-right: 20px;
+    color: #333;
+}
+
+/* Estilos para el título del modelo del avión */
+.contenedor-fichero-info-modelo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c2c2c;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+/* Estilos para las características del avión */
+.contenedor-fichero-info-caracteristicas {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la sección de horas de vuelo, origen y año */
+.contenedor-fichero-info-horasVuelo, 
+.contenedor-fichero-info-origen, 
+.contenedor-fichero-info-anio {
+    font-size: 1.2em;
+    color: #333;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en la información */
+.contenedor-fichero-info-horasVuelo:hover,
+.contenedor-fichero-info-origen:hover,
+.contenedor-fichero-info-anio:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de la imagen */
+.contenedor-fichero-foto {
+    flex: 0 0 300px;
+    margin-left: 20px;
+}
+
+#foto-fichero-avion {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en la imagen */
+#foto-fichero-avion:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}

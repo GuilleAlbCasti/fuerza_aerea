@@ -19,8 +19,8 @@
                     <tbody>';
                         foreach($aviones as $avion) {
                             $html .= '<tr>';
-                            $html .= '<td>'.$avion->modelo.'</td>';
-                            $html .= '<td>'.$avion->base_nombre.'</td>';
+                            $html .= '<td><a href="../templates/avion.php?id='.$avion->id.'">'.$avion->modelo.'</a></td>';
+                            $html .= '<td><a href="../templates/avion.php?id='.$avion->id.'">'.$avion->base_nombre.'</a></td>';
                             $html .= '</tr>';
                         }; 
                         $html .= '
