@@ -27,7 +27,6 @@
                         <td>Horas de vuelo</td>
                         <td>Año</td>
                     </tr>
-                    </tr>
                 </thead>
                 <tbody>
                     <tr>';

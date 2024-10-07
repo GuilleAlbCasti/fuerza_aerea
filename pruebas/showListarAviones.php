@@ -7,38 +7,27 @@
         $aviones = traer_aviones();
 
         $html = '
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>Aviones</title>
-        </head>
-        <body>
-            <h2>Listado de Aviones</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <td>Modelo</td>
-                        <td>Base Aérea</td>
-                    </tr>
-                    </tr>
-                </thead>
-                <tbody>';
-                    foreach($aviones as $avion) {
-                        $html .= '<tr>';
-                        $html .= '<td>'.$avion->modelo.'</td>';
-                        $html .= '<td>'.$avion->base_nombre.'</td>';
-                        $html .= '</tr>';
-                    }; 
-                    $html .= '
-                </tbody>
-            </table>
-        </body>';
+            <div class="main-listados">
+                <h2 class="main-listados-titulo">Listado de las Bases Aéreas</h2>
+                <table class="main-listados-tabla">
+                    <thead>
+                        <tr>
+                            <td>MODELO</td>
+                            <td>BASE AÉREA</td>
+                        </tr>
+                    </thead>
+                    <tbody>';
+                        foreach($aviones as $avion) {
+                            $html .= '<tr>';
+                            $html .= '<td>'.$avion->modelo.'</td>';
+                            $html .= '<td>'.$avion->base_nombre.'</td>';
+                            $html .= '</tr>';
+                        }; 
+                        $html .= '
+                    </tbody>
+                </table>
+            </div>';
         
         return $html;
 
     } 
-
-    echo (showListarAviones());

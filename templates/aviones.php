@@ -1,6 +1,6 @@
 <?php
 
-require_once '../pruebas/showListarBases.php';
+require_once '../pruebas/showListarAviones.php';
 
 echo '
     <!DOCTYPE html>
@@ -8,7 +8,7 @@ echo '
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bases Aéreas</title>
+        <title>Aviones</title>
         <link rel="stylesheet" href="../css/estilos.css">
         <link rel="stylesheet" href="../css/estilos-tablas.css">
     </head>
@@ -30,8 +30,8 @@ echo '
             </div>
         </header>
         <main>';
-echo showListarBases();
-echo '
+        echo showListarAviones();
+        echo '
         </main>
         <footer>
             <h6>by Guillermo Castiglioni & Nicolás Mateos</h6>
