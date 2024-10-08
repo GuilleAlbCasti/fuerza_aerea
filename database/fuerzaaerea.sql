@@ -33,7 +33,8 @@ CREATE TABLE `avion` (
   `anio` int(11) NOT NULL,
   `origen` varchar(20) NOT NULL,
   `horas_vuelo` int(11) NOT NULL,
-  `base_fk` int(11) NOT NULL
+  `base_fk` int(11) NOT NULL,
+  `categoria` varchar(100) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

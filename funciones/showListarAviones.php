@@ -8,7 +8,7 @@
 
         $html = '
             <div class="main-listados">
-                <h2 class="main-listados-titulo">Listado de las Bases Aéreas</h2>
+                <h2 class="main-listados-titulo">Listado de Aviones</h2>
                 <table class="main-listados-tabla">
                     <thead>
                         <tr>

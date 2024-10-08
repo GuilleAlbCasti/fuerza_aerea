@@ -26,6 +26,11 @@ footer,
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
  /* -------------- ESTILOS DEL HEADER ---------------- */
 
 header {

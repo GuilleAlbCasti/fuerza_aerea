@@ -15,7 +15,8 @@
                     <p class="contenedor-fichero-info-horasVuelo">Horas de Vuelo: '.$avion->horas_vuelo.'</p>
                     <p class="contenedor-fichero-info-origen">Origen: '.$avion->origen.'</p>
                     <p class="contenedor-fichero-info-anio">Año de Fabricación: '.$avion->anio.'</p>
-                    <p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p>
+                    <p class="contenedor-fichero-info-categoria">Categoría: '.$avion->categoria.'</p>
+                    <a href="/fuerza_aerea/templates/aviones.php"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
                 </div>
                 <div class="contenedor-fichero-foto">
                     <img src="../img/pampa.jpg" alt="imagen del avión" id="foto-fichero-avion">

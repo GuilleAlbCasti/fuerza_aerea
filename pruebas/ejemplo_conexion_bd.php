@@ -10,7 +10,3 @@ foreach($aviones as $avion) {
     echo "- " . $avion->modelo . "<br>";
 }
 // Cerramos la conexión
-
-
-
-?>
