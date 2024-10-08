@@ -40,7 +40,17 @@ function buscar_nombre_base($letras) {
 
 function traer_aviones() {
     $db = conexion_bd();
-    $query = $db->prepare('SELECT avion.id, avion.modelo, avion.anio, avion.origen, avion.horas_vuelo, base.nombre as base_nombre FROM avion INNER JOIN base ON avion.base_fk = base.id ORDER BY modelo ASC');
+    $query = $db->prepare('SELECT avion.id, avion.modelo, avion.anio, avion.origen, avion.horas_vuelo, avion.categoria, base.nombre as base_nombre FROM avion INNER JOIN base ON avion.base_fk = base.id ORDER BY modelo ASC');
+    $query->execute();
+
+    return $query->fetchAll(PDO::FETCH_OBJ);
+}
+
+// OBTENER LISTA DE AVIONES POR CATEGORIA
+
+function traer_aviones_x_categoria() {
+    $db = conexion_bd();
+    $query = $db->prepare('SELECT DISTINCT categoria FROM avion ORDER BY categoria ASC');
     $query->execute();
 
     return $query->fetchAll(PDO::FETCH_OBJ);

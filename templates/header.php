@@ -23,6 +23,7 @@ echo '
                         <li><a href="/fuerza_aerea/index.php">HOME</a></li>
                         <li><a href="/fuerza_aerea/templates/bases.php">BASES</a></li>
                         <li><a href="/fuerza_aerea/templates/aviones.php">AVIONES</a></li>
+                        <li><a href="/fuerza_aerea/templates/categorias.php">CATEGORIAS</a></li>
                         <li><a href="#">INGRESAR</a></li>
                     </ul>
                 </nav>
