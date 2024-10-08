@@ -14,7 +14,7 @@ echo '
     <body>
         <header>
             <div class="titulo-contenedor">
-                <img class="logo" src="img/logo1.webp" alt="logo ffaa">
+                <a href="/fuerza_aerea/index.php"><img class="logo" src="/fuerza_aerea/img/logo1.webp" alt="logo ffaa"></a>
                 <h2 class="titulo">Listado de los aviones de la Fuerza Aérea Argentina</h2>
             </div>
             <div class="menu-contenedor">

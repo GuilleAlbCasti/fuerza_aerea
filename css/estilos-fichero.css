@@ -37,8 +37,9 @@
 /* Estilos para la sección de horas de vuelo, origen y año */
 .contenedor-fichero-info-horasVuelo, 
 .contenedor-fichero-info-origen, 
-.contenedor-fichero-info-anio {
-    font-size: 1.2em;
+.contenedor-fichero-info-anio,
+.contenedor-fichero-info-volver {
+    font-size: 1em;
     color: #333;
     background-color: #fafafa;
     padding: 10px;
@@ -52,7 +53,8 @@
 /* Efecto hover en la información */
 .contenedor-fichero-info-horasVuelo:hover,
 .contenedor-fichero-info-origen:hover,
-.contenedor-fichero-info-anio:hover {
+.contenedor-fichero-info-anio:hover,
+.contenedor-fichero-info-volver:hover {
     background-color: #f0f0f0;
     transform: translateY(-2px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -75,4 +77,21 @@
 #foto-fichero-avion:hover {
     transform: scale(1.05);
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto del boton volver */
+.contenedor-fichero-info-volver:active {
+    background-color: rgb(233, 193, 63);
+    transform: translateY(+2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.555);
+}
+
+.contenedor-fichero-info-volver:hover {
+    cursor: pointer;
+}
+
+
+#boton-fichero-info-volver {
+    background-color: rgb(237, 205, 100);
+    font-weight: 800;
 }

@@ -1,7 +1,7 @@
 <?php
 
-require_once '/fuerza_aerea/funciones/showListarAvion.php';
-require_once '/fuerza_aerea/templates/header.php';
+require_once '../funciones/showListarAvion.php';
+require_once '../templates/header.php';
 
 echo '
         <main>';
@@ -17,5 +17,5 @@ echo '
         echo '
         </main>';
 
-require_once '/fuerza_aerea/templates/footer.php';
+require_once '../templates/footer.php';
 
