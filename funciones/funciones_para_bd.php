@@ -46,12 +46,22 @@ function traer_aviones() {
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
 
-// OBTENER LISTA DE AVIONES POR CATEGORIA
+// OBTENER LISTA DE CATEGORÍA
 
-function traer_aviones_x_categoria() {
+function traer_categoria() {
     $db = conexion_bd();
     $query = $db->prepare('SELECT DISTINCT categoria FROM avion ORDER BY categoria ASC');
     $query->execute();
+
+    return $query->fetchAll(PDO::FETCH_OBJ);
+}
+
+// OBTENER LISTA DE AVIONES SEGÚN CATEGORÍA
+
+function traer_aviones_por_categoria($nombre_categoria) {
+    $db = conexion_bd();
+    $query = $db->prepare('SELECT a.id, a.modelo, b.nombre AS base_nombre FROM avion a  JOIN base b ON a.base_fk = b.id WHERE a.categoria = ?');
+    $query->execute(array($nombre_categoria));
 
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
