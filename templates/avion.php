@@ -1,6 +1,6 @@
 <?php
 
-require_once '../templates/header.php';
+require_once 'header.php';
 
 echo '
     <main>';
@@ -17,7 +17,7 @@ echo '
                     <p class="contenedor-fichero-info-origen">Origen: '.$avion->origen.'</p>
                     <p class="contenedor-fichero-info-anio">Año de Fabricación: '.$avion->anio.'</p>
                     <p class="contenedor-fichero-info-categoria">Categoría: '.$avion->categoria.'</p>
-                    <a href="/fuerza_aerea/aviones"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
+                    <a href="../aviones"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
                 </div>
                 <div class="contenedor-fichero-foto">
                    <img src="../img/pampa.jpg" alt="imagen del avión" id="foto-fichero-avion">                    </div>
@@ -31,5 +31,5 @@ echo '
 echo '
     </main>';
 
-require_once '../templates/footer.php';
+require_once 'footer.php';
 

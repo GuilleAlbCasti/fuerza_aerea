@@ -1,6 +1,6 @@
 <?php
 
-require_once '../templates/header.php';
+require_once 'header.php';
 
 $bases = traer_bases();
 
@@ -31,4 +31,4 @@ echo '
             </table>
         </div>
     </main>';
-require_once '../templates/footer.php';
+require_once 'footer.php';

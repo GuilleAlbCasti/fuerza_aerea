@@ -1,6 +1,6 @@
 <?php
 
-require_once '../templates/header.php';
+require_once 'header.php';
 
 echo '<main>';
 
@@ -37,4 +37,4 @@ if (isset($_GET['categoria'])) {
 };     
 echo '</main>';
 
-require_once '../templates/footer.php';
+require_once 'footer.php';

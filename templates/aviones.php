@@ -1,6 +1,6 @@
 <?php
 
-require_once '../templates/header.php';
+require_once 'header.php';
 
 $aviones = traer_aviones();
 
@@ -20,9 +20,9 @@ echo '
                 foreach($aviones as $avion) {
                     echo '
                     <tr>  
-                        <td><a href="../templates/avion/?id='.$avion->id.'">'.$avion->modelo.'</a></td>
-                        <td><a href="../templates/avion/?id='.$avion->id.'">'.$avion->categoria.'</a></td>
-                        <td><a href="../templates/avion/?id='.$avion->id.'">'.$avion->base_nombre.'</a></td>
+                        <td><a href="avion/?id='.$avion->id.'">'.$avion->modelo.'</a></td>
+                        <td><a href="avion/?id='.$avion->id.'">'.$avion->categoria.'</a></td>
+                        <td><a href="avion/?id='.$avion->id.'">'.$avion->base_nombre.'</a></td>
                     </tr>';
                 }; 
 echo '
@@ -30,4 +30,4 @@ echo '
         </table>
     </div>
 </main>';
-require_once '../templates/footer.php';
+require_once 'footer.php';
