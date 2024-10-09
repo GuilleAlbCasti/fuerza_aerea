@@ -1,6 +1,6 @@
 <?php
 
-require_once '../funciones/funciones.php';
+require_once 'funciones/funciones.php';
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
