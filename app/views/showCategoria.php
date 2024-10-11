@@ -1,7 +1,7 @@
 <?php
 
 require_once '../fuerza_aerea/templates/header.php';
-require_once 'models/avionModel.php';
+require_once __DIR__ . '/../models/avionModel.php';
 
 
 echo '<main>';
@@ -10,7 +10,7 @@ echo '<main>';
 if (isset($_GET['categoria'])) {
     $nombre_selecionado = $_GET['categoria'];
     $avionModel = new avionModel();
-    $avion = $avionModel->getCategoria($nombre_selecionado);
+    $aviones = $avionModel->getCategoria($nombre_selecionado);
     echo '
         <div class="main-listados">
             <h2 class="main-listados-titulo">Listado de Categoria "'.$nombre_selecionado.'"</h2>

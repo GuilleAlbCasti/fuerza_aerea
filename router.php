@@ -1,6 +1,6 @@
 <?php
 
-require_once 'app/controllers/controller.php';
+require_once __DIR__ . '/app/controllers/controller.php';
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];

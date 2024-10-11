@@ -1,6 +1,6 @@
 <?php
 
-require_once 'model.php';
+require_once __DIR__ . '/../models/dbModel.php';
 
 class baseModel {
 

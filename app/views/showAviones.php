@@ -1,10 +1,10 @@
 <?php
 
 require_once '../fuerza_aerea/templates/header.php';
-require_once 'models/avionModel.php';
+require_once __DIR__ . '/../models/avionModel.php';
 
 $avionModel = new avionModel();
-$avion = $avionModel->getAllAvion();
+$aviones = $avionModel->getAllAvion();
 
 echo '
 <main>

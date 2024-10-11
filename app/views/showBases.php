@@ -1,7 +1,7 @@
 <?php
 
 require_once '../fuerza_aerea/templates/header.php';
-require_once 'models/baseModel.php';
+require_once __DIR__ . '/../models/baseModel.php';
 
 $baseModel = new baseModel();
 $bases = $baseModel->getAllBase();
