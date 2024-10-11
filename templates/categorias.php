@@ -4,6 +4,7 @@ require_once 'header.php';
 
 $aviones = traer_categoria();
 
+
 echo '  
 <main>
     <div class="main-listados">

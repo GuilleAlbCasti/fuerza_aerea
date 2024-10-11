@@ -2,10 +2,12 @@
 
 require_once 'header.php';
 
+
 echo '<main>';
 
+
 if (isset($_GET['categoria'])) {
-    $nombre_categoria = $_GET['categoria'];
+    $nombre_selecionado = $_GET['categoria'];
     $aviones = traer_aviones_por_categoria($nombre_selecionado);
     echo '
         <div class="main-listados">
@@ -21,14 +23,16 @@ if (isset($_GET['categoria'])) {
                     foreach($aviones as $avion) {
                         echo '
                             <tr>
-                                <td><a href="../templates/avion/?id='.$avion->id.'">'.$avion->modelo.'</a></td>
-                                <td><a href="../templates/avion/?id='.$avion->id.'">'.$avion->base_nombre.'</a></td>
+                                <td><a href="/fuerza_aerea/avion/?id='.$avion->id.'">'.$avion->modelo.'</a></td>
+                                <td><a href="/fuerza_aerea/avion/?id='.$avion->id.'">'.$avion->base_nombre.'</a></td>
                             </tr>';
                     }; 
-    echo '
+                    echo '
                 </tbody>
             </table>
-        </div>';        
+            <br>
+            <a href="../categorias"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>  
+        </div>';
 } else {
     echo '
         <div class="contenedor-fichero">
