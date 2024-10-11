@@ -1,8 +1,10 @@
 <?php
 
-require_once 'header.php';
+require_once '../fuerza_aerea/templates/header.php';
+require_once 'models/baseModel.php';
 
-$bases = traer_bases();
+$baseModel = new baseModel();
+$bases = $baseModel->getAllBase();
 
 echo '
     <main>
@@ -31,4 +33,4 @@ echo '
             </table>
         </div>
     </main>';
-require_once 'footer.php';
+require_once '../fuerza_aerea/templates/footer.php';

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'funciones/funciones.php';
+require_once 'app/controllers/controller.php';
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -15,26 +15,26 @@ switch($params[0]) {
         showHome();
         break;
     case 'bases':
-        showListarBases();
+        showBases();
         break;
     case 'aviones':
-        showListarAviones();
+        showAviones();
         break;
     case 'categorias':
-        showListarCategorias();
+        showCategorias();
         break;
     case 'avion':
         if (isset($params[1])) {
-            showListarAvion($params[1]);
+            showAvion($params[1]);
         } else {
-            showHome(); //ARMAR UNA PAGINA DE AVION NO ENCONTRADO!!!!
+            showHome();
         }
         break;
     case 'categoria':
         if (isset($params[1])) {
-            showListarCategoria($params[1]);
+            showCategoria($params[1]);
         } else {
-            showHome(); //ARMAR UNA PAGINA DE ERROR...
+            showHome();
         }
         break;
     default:

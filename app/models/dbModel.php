@@ -1,8 +1,8 @@
 <?php
 
-require_once '../config.php';
+require_once __DIR__.'/../config.php';
 
-class Model {
+class dbModel {
 
   protected $db;
   
@@ -13,7 +13,6 @@ class Model {
       ";dbname=".MYSQL_DB.";charset=utf8".
       MYSQL_USER,MYSQL_PASS);
       $this->_deploy();
-      $this->connect();
 
   }
 
@@ -51,7 +50,7 @@ class Model {
     }
   }
 
-  function connect() {
+  public function connect() {
       return $this->db;
   }
 

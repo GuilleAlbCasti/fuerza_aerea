@@ -1,12 +1,14 @@
 <?php
 
-require_once 'header.php';
+require_once '../fuerza_aerea/templates/header.php';
+require_once 'models/avionModel.php';
 
 echo '
     <main>';
     if (isset($_GET['id'])) {
         $id_selecionado = $_GET['id'];
-        $avion = traer_avion($id_selecionado);
+        $avionModel = new avionModel();
+        $avion = $avionModel->getAvion($id_selecionado);
         echo '
             <div class="contenedor-fichero">
                 <div class="contenedor-fichero-info">
@@ -31,5 +33,5 @@ echo '
 echo '
     </main>';
 
-require_once 'footer.php';
+require_once '../fuerza_aerea/templates/footer.php';
 

@@ -1,9 +1,10 @@
 <?php
 
-require_once 'header.php';
+require_once '../fuerza_aerea/templates/header.php';
+require_once 'models/avionModel.php';
 
-$aviones = traer_categoria();
-
+$avionModel = new avionModel();
+$avion = $avionModel->getAllCategoria();
 
 echo '  
 <main>
@@ -28,4 +29,4 @@ echo '
     </div>
 </main>';
 
-require_once 'footer.php';
+require_once '../fuerza_aerea/templates/footer.php';
