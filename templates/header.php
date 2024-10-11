@@ -20,10 +20,10 @@ echo '
             <div class="menu-contenedor">
                 <nav class="menu-barra">
                     <ul>
-                        <li><a href="home">HOME</a></li>
-                        <li><a href="bases">BASES</a></li>
-                        <li><a href="aviones">AVIONES</a></li>
-                        <li><a href="categorias">CATEGORIAS</a></li>
+                        <li><a href="/fuerza_aerea/home">HOME</a></li>
+                        <li><a href="/fuerza_aerea/bases">BASES</a></li>
+                        <li><a href="/fuerza_aerea/aviones">AVIONES</a></li>
+                        <li><a href="/fuerza_aerea/categorias">CATEGORIAS</a></li>
                         <li><a href="#">INGRESAR</a></li>
                     </ul>
                 </nav>
