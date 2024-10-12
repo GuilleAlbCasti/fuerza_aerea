@@ -25,4 +25,8 @@
     
     function showCategoria($nombre_selecionado) {
         require_once __DIR__ .'/../views/showCategoria.php';
-    } 
+    }
+    
+    function showIngreso() {
+        require_once __DIR__ .'/../views/showIngreso.php';
+    }

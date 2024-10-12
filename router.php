@@ -37,6 +37,9 @@ switch($params[0]) {
             showHome();
         }
         break;
+    case 'ingreso':
+        showIngreso();
+        break;
     default:
         echo("La página no existe. Error 404");
         break;

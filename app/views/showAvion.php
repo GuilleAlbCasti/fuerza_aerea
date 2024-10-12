@@ -22,7 +22,7 @@ echo '
                     <a href="../aviones"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
                 </div>
                 <div class="contenedor-fichero-foto">
-                   <img src="../img/pampa.jpg" alt="imagen del avión" id="foto-fichero-avion">                    </div>
+                   <img src="/fuerza_aerea/static/img/pampa.jpg" alt="imagen del avión" id="foto-fichero-avion">                    </div>
                 </div>';        
     } else {
         echo '

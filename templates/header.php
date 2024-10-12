@@ -10,6 +10,7 @@ echo '
         <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos.css">
         <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos-fichero.css">
         <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos-tablas.css">
+        <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos-administrador.css">
     </head>
     <body>
         <header>
@@ -24,7 +25,7 @@ echo '
                         <li><a href="/fuerza_aerea/bases">BASES</a></li>
                         <li><a href="/fuerza_aerea/aviones">AVIONES</a></li>
                         <li><a href="/fuerza_aerea/categorias">CATEGORIAS</a></li>
-                        <li><a href="#">INGRESAR</a></li>
+                        <li><a href="/fuerza_aerea/ingreso">INGRESAR</a></li>
                     </ul>
                 </nav>
             </div>
