@@ -38,7 +38,24 @@ switch($params[0]) {
         }
         break;
     case 'ingreso':
-        showIngreso();
+        if (isset($params[1])) {
+            switch($params[1]) {
+                case 'bases':
+                    showIngresoBases();
+                    break;
+                case 'aviones':
+                    showIngresoAviones();
+                    break;
+                case 'categorias':
+                    showIngresoCategorias();
+                    break;
+                default:
+                    showIngreso(); // Función por defecto para 'ingreso'
+                    break;
+            }
+        } else {
+            showIngreso();
+        }
         break;
     default:
         echo("La página no existe. Error 404");

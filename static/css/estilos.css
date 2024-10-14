@@ -114,6 +114,11 @@ main {
     height: 150px;
 }
 
+#foto_categoria_en_opcion {
+    width: 350px;
+    height: 130px;
+}
+
  /* -------------- ESTILOS DEL FOOTER ---------------- */
 
 footer {

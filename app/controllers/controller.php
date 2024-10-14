@@ -30,3 +30,15 @@
     function showIngreso() {
         require_once __DIR__ .'/../views/showIngreso.php';
     }
+
+    function showIngresoBases() {
+        require_once __DIR__ .'/../views/showIngresoBases.php';
+    }
+
+    function showIngresoAviones() {
+        require_once __DIR__ .'/../views/showIngresoAviones.php';
+    }
+    
+    function showIngresoCategorias() {
+        require_once __DIR__ .'/../views/showIngresoCategorias.php';
+    }
