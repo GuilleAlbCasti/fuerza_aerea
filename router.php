@@ -39,18 +39,93 @@ switch($params[0]) {
         break;
     case 'ingreso':
         if (isset($params[1])) {
-            switch($params[1]) {
+            switch ($params[1]) {
                 case 'bases':
-                    showIngresoBases();
+                    if (isset($params[2])) {
+                        switch ($params[2]) {
+                            case 'agregar':
+                                showAgregarBase();
+                                break;
+                            case 'editar':
+                                if (isset($params[3])) {
+                                    showEditarBase($params[3]); // $params[3] sería el ID de la base
+                                } else {
+                                    showIngresoBases();
+                                }
+                                break;
+                            case 'eliminar':
+                                if (isset($params[3])) {
+                                    showEliminarBase($params[3]);
+                                } else {
+                                    showIngresoBases();
+                                }
+                                break;
+                            default:
+                                showIngresoBases();
+                                break;
+                        }
+                    } else {
+                        showIngresoBases();
+                    }
                     break;
                 case 'aviones':
-                    showIngresoAviones();
+                    if (isset($params[2])) {
+                        switch ($params[2]) {
+                            case 'agregar':
+                                showAgregarAvion();
+                                break;
+                            case 'editar':
+                                if (isset($params[3])) {
+                                    showEditarAvion($params[3]);
+                                } else {
+                                    showIngresoAviones();
+                                }
+                                break;
+                            case 'eliminar':
+                                if (isset($params[3])) {
+                                    showEliminarAvion($params[3]);
+                                } else {
+                                    showIngresoAviones();
+                                }
+                                break;
+                            default:
+                                showIngresoAviones();
+                                break;
+                        }
+                    } else {
+                        showIngresoAviones();
+                    }
                     break;
                 case 'categorias':
-                    showIngresoCategorias();
+                    if (isset($params[2])) {
+                        switch ($params[2]) {
+                            case 'agregar':
+                                showAgregarCategoria();
+                                break;
+                            case 'editar':
+                                if (isset($params[3])) {
+                                    showEditarCategoria($params[3]);
+                                } else {
+                                    showIngresoCategorias();
+                                }
+                                break;
+                            case 'eliminar':
+                                if (isset($params[3])) {
+                                    showEliminarCategoria($params[3]);
+                                } else {
+                                    showIngresoCategorias();
+                                }
+                                break;
+                            default:
+                                showIngresoCategorias();
+                                break;
+                        }
+                    } else {
+                        showIngresoCategorias();
+                    }
                     break;
                 default:
-                    showIngreso(); // Función por defecto para 'ingreso'
+                    showIngreso();
                     break;
             }
         } else {

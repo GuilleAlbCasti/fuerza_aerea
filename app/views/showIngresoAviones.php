@@ -12,7 +12,7 @@ echo '
         <div class="main-ingreso-encabezado">
             <h2 class="main-listados-titulo, main-ingreso-encabezado-titulo">DATOS DE AVIONES</h2>
             <div class="main-listados-encabezado-botones"> 
-                <a href="#"><p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">AGREGAR</p></a>
+                <a href="/fuerza_aerea/ingreso/aviones/agregar"><p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">AGREGAR</p></a>
             </div>  
         </div>
         <table class="main-listados-tabla">

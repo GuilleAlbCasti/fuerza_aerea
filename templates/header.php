@@ -11,6 +11,7 @@ echo '
         <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos-fichero.css">
         <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos-tablas.css">
         <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos-administrador.css">
+        <link rel="stylesheet" href="/fuerza_aerea/static/css/estilos-formulario.css">
     </head>
     <body>
         <header>

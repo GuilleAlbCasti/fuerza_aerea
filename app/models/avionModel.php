@@ -57,4 +57,11 @@ class avionModel {
         return $query->fetch(PDO::FETCH_OBJ);
     }
 
+    // AGREGAR UN AVIÓN
+
+    function agregarAvion($modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria) {
+        $query = $this->db->prepare('INSERT INTO avion(modelo, anio, origen, horas_vuelo, base_fk, categoria) VALUES (?,?,?,?,?,?)');
+        $query->execute([$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria]);
+    }
+
 }
