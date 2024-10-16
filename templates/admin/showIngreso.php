@@ -1,6 +1,6 @@
 <?php
 
-require_once '../fuerza_aerea/templates/header.php';
+require_once '../fuerza_aerea/templates/layouts/header.php';
 
 echo '
 <main>
@@ -34,4 +34,4 @@ echo '
         </div>
     </div>
 </main>';
-require_once '../fuerza_aerea/templates/footer.php';
+require_once '../fuerza_aerea/templates/layouts/footer.php';

@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'templates/header.php';
+    require_once 'templates/layouts/header.php';
     echo '
         <main>
             <div class="opcion-contenedor">
@@ -20,4 +20,4 @@
                 </div>
             </div>
         </main>';
-    require_once 'templates/footer.php';
+    require_once 'templates/layouts/footer.php';

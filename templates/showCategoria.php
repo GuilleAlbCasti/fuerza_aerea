@@ -1,18 +1,11 @@
 <?php
 
-require_once '../fuerza_aerea/templates/header.php';
-require_once __DIR__ . '/../models/avionModel.php';
+require_once '../fuerza_aerea/templates/layouts/header.php';
+require_once __DIR__ . '/../views/categoriaViews.php';
 
 
 
-echo '<main>';
-
-
-if (isset($_GET['categoria'])) {
-    $nombre_selecionado = $_GET['categoria'];
-    $avionModel = new avionModel();
-    $aviones = $avionModel->getCategoria($nombre_selecionado);
-    echo '
+echo '<main>
         <div class="main-listados">
             <h2 class="main-listados-titulo">Listado de Categoria "'.$nombre_selecionado.'"</h2>
             <table class="main-listados-tabla">
@@ -35,13 +28,7 @@ if (isset($_GET['categoria'])) {
             </table>
             <br>
             <a href="../categorias"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>  
-        </div>';
-} else {
-    echo '
-        <div class="contenedor-fichero">
-            <h2 class="contenedor-fichero-info-modelo">La categoria no fue encontrada</h2>
-        </div>';
-};     
-echo '</main>';
+        </div>
+    </main>';
 
-require_once '../fuerza_aerea/templates/footer.php';
+require_once '../fuerza_aerea/templates/layouts/footer.php';
