@@ -1,10 +1,9 @@
 <?php
 
-require_once '../fuerza_aerea/templates/header.php';
-require_once __DIR__ . '/../models/baseModel.php';
+require_once '../fuerza_aerea/templates/layouts/header.php';
+require_once __DIR__ . '/../../app/views/adminViews.php';
 
-$baseModel = new baseModel();
-$bases = $baseModel->getAllBase();
+
 
 echo '
     <main>
@@ -49,4 +48,4 @@ echo '
             </table>
         </div>
     </main>';
-require_once '../fuerza_aerea/templates/footer.php';
+require_once '../fuerza_aerea/templates/layouts/footer.php';

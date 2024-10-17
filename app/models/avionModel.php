@@ -51,8 +51,8 @@ class avionModel {
     // BUSCAR AVION POR MODELO
 
     function searchAvion($letras) {
-        $query = $this->db->prepare('SELECT * FROM avion WHERE FIELD_A LIKE letras = ?');
-        $query->execute(array('%.$letras.%'));
+        $query = $this->db->prepare('SELECT * FROM avion WHERE FIELD_A LIKE letras ?');
+        $query->execute(array("%$letras%"));
 
         return $query->fetch(PDO::FETCH_OBJ);
     }

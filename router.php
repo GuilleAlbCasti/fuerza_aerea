@@ -1,6 +1,10 @@
 <?php
 
-require_once __DIR__ . '/app/controllers/controller.php';
+require_once __DIR__ . '/app/controllers/controllersUsers.php';
+require_once __DIR__ . '/app/controllers/controllersAdmin.php';
+
+$usuario = new controllersUsers();
+$admin = new controllersAdmin();
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -12,124 +16,127 @@ $params = explode('/', $action);
 
 switch($params[0]) {
     case 'home':
-        showHome();
+        $usuario->controlHome();
         break;
     case 'bases':
-        showBases();
+        $usuario->controlBases();
         break;
     case 'aviones':
-        showAviones();
+        $usuario->controlAviones();
         break;
     case 'categorias':
-        showCategorias();
+        $usuario->controlCategorias();
         break;
     case 'avion':
         if (isset($params[1])) {
-            showAvion($params[1]);
+            $usuario->controlAvion($params[1]);
         } else {
-            showHome();
+            $usuario->controlHome();
         }
         break;
     case 'categoria':
         if (isset($params[1])) {
-            showCategoria($params[1]);
+            $usuario->controlCategoria($params[1]);
         } else {
-            showHome();
+            $usuario->controlHome();
         }
         break;
     case 'ingreso':
         if (isset($params[1])) {
             switch ($params[1]) {
                 case 'bases':
-                    if (isset($params[2])) {
-                        switch ($params[2]) {
-                            case 'agregar':
-                                showAgregarBase();
-                                break;
-                            case 'editar':
-                                if (isset($params[3])) {
-                                    showEditarBase($params[3]); // $params[3] sería el ID de la base
-                                } else {
-                                    showIngresoBases();
-                                }
-                                break;
-                            case 'eliminar':
-                                if (isset($params[3])) {
-                                    showEliminarBase($params[3]);
-                                } else {
-                                    showIngresoBases();
-                                }
-                                break;
-                            default:
-                                showIngresoBases();
-                                break;
-                        }
-                    } else {
-                        showIngresoBases();
-                    }
+                    // if (isset($params[2])) {
+                    //     switch ($params[2]) {
+                    //         case 'agregar':
+                    //             $admin->controlAgregarBase();
+                    //             break;
+                    //         case 'editar':
+                    //             if (isset($params[3])) {
+                    //                 $admin->controlEditarBase($params[3]); // $params[3] sería el ID de la base
+                    //             } else {
+                    //                 $admin->controlIngresoBases();
+                    //             }
+                    //             break;
+                    //         case 'eliminar':
+                    //             if (isset($params[3])) {
+                    //                 $admin->controlEliminarBase($params[3]);
+                    //             } else {
+                    //                 $admin->controlIngresoBases();
+                    //             }
+                    //             break;
+                    //         default:
+                    //             $admin->controlIngresoBases();
+                    //             break;
+                    //     }
+                    // } else {
+                    //     $admin->controlIngresoBases();
+                    // }
+                    $admin->controlIngresoBases();
                     break;
                 case 'aviones':
-                    if (isset($params[2])) {
-                        switch ($params[2]) {
-                            case 'agregar':
-                                showAgregarAvion();
-                                break;
-                            case 'editar':
-                                if (isset($params[3])) {
-                                    showEditarAvion($params[3]);
-                                } else {
-                                    showIngresoAviones();
-                                }
-                                break;
-                            case 'eliminar':
-                                if (isset($params[3])) {
-                                    showEliminarAvion($params[3]);
-                                } else {
-                                    showIngresoAviones();
-                                }
-                                break;
-                            default:
-                                showIngresoAviones();
-                                break;
-                        }
-                    } else {
-                        showIngresoAviones();
-                    }
+                    //if (isset($params[2])) {
+                    //     switch ($params[2]) {
+                    //         case 'agregar':
+                    //             $admin->controlAgregarAvion();
+                    //             break;
+                    //         case 'editar':
+                    //             if (isset($params[3])) {
+                    //                 $admin->controlEditarAvion($params[3]);
+                    //             } else {
+                    //                 $admin->controlIngresoAviones();
+                    //             }
+                    //             break;
+                    //         case 'eliminar':
+                    //             if (isset($params[3])) {
+                    //                 $admin->controlEliminarAvion($params[3]);
+                    //             } else {
+                    //                 $admin->controlIngresoAviones();
+                    //             }
+                    //             break;
+                    //         default:
+                    //             $admin->controlIngresoAviones();
+                    //             break;
+                    //     }
+                    // } else {
+                    //     $admin->controlIngresoAviones();
+                    // }
+                    $admin->controlIngresoAviones();
                     break;
                 case 'categorias':
-                    if (isset($params[2])) {
-                        switch ($params[2]) {
-                            case 'agregar':
-                                showAgregarCategoria();
-                                break;
-                            case 'editar':
-                                if (isset($params[3])) {
-                                    showEditarCategoria($params[3]);
-                                } else {
-                                    showIngresoCategorias();
-                                }
-                                break;
-                            case 'eliminar':
-                                if (isset($params[3])) {
-                                    showEliminarCategoria($params[3]);
-                                } else {
-                                    showIngresoCategorias();
-                                }
-                                break;
-                            default:
-                                showIngresoCategorias();
-                                break;
-                        }
-                    } else {
-                        showIngresoCategorias();
-                    }
-                    break;
-                default:
-                    showIngreso();
-                    break;
+                //     if (isset($params[2])) {
+                //         switch ($params[2]) {
+                //             case 'agregar':
+                //                 $admin->controlAgregarCategoria();
+                //                 break;
+                //             case 'editar':
+                //                 if (isset($params[3])) {
+                //                     $admin->controlEditarCategoria($params[3]);
+                //                 } else {
+                //                     $admin->controlIngresoCategorias();
+                //                 }
+                //                 break;
+                //             case 'eliminar':
+                //                 if (isset($params[3])) {
+                //                     $admin->controlEliminarCategoria($params[3]);
+                //                 } else {
+                //                     $admin->controlIngresoCategorias();
+                //                 }
+                //                 break;
+                //             default:
+                //                 $admin->controlIngresoCategorias();
+                //                 break;
+                //         }
+                //     } else {
+                //         $admin->controlIngresoCategorias();
+                //     }
+                //     break;
+                // default:
+                //     $admin->controlIngreso();
+                $admin->controlIngresoCategorias();
+                break;
             }
         } else {
-            showIngreso();
+            $admin->controlIngreso();
         }
         break;
     default:

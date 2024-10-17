@@ -1,7 +1,7 @@
 <?php
 
 require_once '../fuerza_aerea/templates/layouts/header.php';
-require_once __DIR__ . '/../views/categoriasViews.php';
+require_once __DIR__ . '/../app/views/categoriaViews.php';
 
 echo '  
 <main>

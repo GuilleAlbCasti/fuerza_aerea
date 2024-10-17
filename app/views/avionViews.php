@@ -24,13 +24,6 @@ class avionViews {
         }
     }
 
-    // MOSTRAR LISTA DE AVIONES "MODO ADMINISTRADOR"
-    function showIngresoAviones() {
-        $avionModel = new avionModel();
-        $aviones = $avionModel->getAllAvion();
-        require_once '../fuerza_aerea/templates/showIngresoAviones.php';
-    }
-
     // AGREGAR AVIÓN
     function showAgregarAvion() {
         $avionModel = new avionModel();
@@ -39,4 +32,6 @@ class avionViews {
         $aviones = $avionModel->getAllCategoria();
         require_once '../fuerza_aerea/templates/showAgregarAvion.php';
     }
+
+    
 }
