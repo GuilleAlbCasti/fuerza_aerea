@@ -37,11 +37,11 @@ echo '
                         <td>'.$avion->horas_vuelo.'</td>
                         <td>'.$avion->categoria.'</td>
                         <td>'.$avion->base_nombre.'</td>
-                        <td id="columna-botones>
-                            <a href="avion/?id='.$avion->id.'">
+                        <td id="columna-botones">
+                            <a href="/fuerza_aerea/ingreso/aviones/editar/'.$avion->id.'">
                                 <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">EDITAR</p>
                             </a>
-                            <a href="avion/?id='.$avion->id.'">
+                            <a href="/fuerza_aerea/ingreso/aviones/eliminar/'.$avion->id.'">
                                 <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">ELIMINAR</p>
                             </a>
                         </td>

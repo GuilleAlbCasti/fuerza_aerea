@@ -51,7 +51,7 @@ class avionModel {
     // BUSCAR AVION POR MODELO
 
     function searchAvion($letras) {
-        $query = $this->db->prepare('SELECT * FROM avion WHERE FIELD_A LIKE letras ?');
+        $query = $this->db->prepare('SELECT * FROM avion WHERE FIELD_A LIKE ?');
         $query->execute(array("%$letras%"));
 
         return $query->fetch(PDO::FETCH_OBJ);
@@ -62,6 +62,18 @@ class avionModel {
     function agregarAvion($modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria) {
         $query = $this->db->prepare('INSERT INTO avion(modelo, anio, origen, horas_vuelo, base_fk, categoria) VALUES (?,?,?,?,?,?)');
         $query->execute([$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria]);
+    }
+
+    // EDITAR UN AVIÓN
+    function editarAvion($id_seleccionado, $modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria) {
+        $query = $this->db->prepare('UPDATE avion SET modelo = ?, anio = ?, origen = ?, horas_vuelo = ?, base_fk = ?, categoria = ? WHERE id = ?');
+        $query->execute([$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria, $id_seleccionado]);
+    }
+
+    // ELIMINAR UN AVIÓN
+    function eliminarAvion($id_seleccionado) {
+        $query = $this->db->prepare('DELETE FROM avion WHERE id = ?');
+        $query->execute([$id_seleccionado]);
     }
 
 }

@@ -74,33 +74,24 @@ switch($params[0]) {
                     $admin->controlIngresoBases();
                     break;
                 case 'aviones':
-                    //if (isset($params[2])) {
-                    //     switch ($params[2]) {
-                    //         case 'agregar':
-                    //             $admin->controlAgregarAvion();
-                    //             break;
-                    //         case 'editar':
-                    //             if (isset($params[3])) {
-                    //                 $admin->controlEditarAvion($params[3]);
-                    //             } else {
-                    //                 $admin->controlIngresoAviones();
-                    //             }
-                    //             break;
-                    //         case 'eliminar':
-                    //             if (isset($params[3])) {
-                    //                 $admin->controlEliminarAvion($params[3]);
-                    //             } else {
-                    //                 $admin->controlIngresoAviones();
-                    //             }
-                    //             break;
-                    //         default:
-                    //             $admin->controlIngresoAviones();
-                    //             break;
-                    //     }
-                    // } else {
-                    //     $admin->controlIngresoAviones();
-                    // }
-                    $admin->controlIngresoAviones();
+                    if (isset($params[2])) {
+                         switch ($params[2]) {
+                             case 'agregar':
+                                $admin->controlCrearAvion();
+                                break;
+                             case 'editar':
+                                $admin->controlEditarAvion($params[3]);
+                                break;
+                             case 'eliminar':
+                                $admin->controlEliminarAvion($params[3]);
+                                break;
+                             default:
+                                $admin->controlIngresoAviones();
+                                break;
+                         }
+                    } else {
+                        $admin->controlIngresoAviones();
+                    }
                     break;
                 case 'categorias':
                 //     if (isset($params[2])) {
