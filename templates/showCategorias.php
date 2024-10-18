@@ -14,10 +14,10 @@ echo '
                 </tr>
                 </thead>
             <tbody>';
-                foreach($aviones as $avion) {
+                foreach($categorias as $categoria) {
                     echo '
                         <tr>
-                            <td><a href="categoria/?categoria='.$avion->categoria.'">'.$avion->categoria.'</a></td>
+                            <td><a href="categoria/'.$categoria->id.'">'.$categoria->nombre.'</a></td>
                         </tr>';
                 }; 
 echo '

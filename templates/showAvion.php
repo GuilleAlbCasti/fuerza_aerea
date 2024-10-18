@@ -13,7 +13,7 @@ echo '
                 <p class="contenedor-fichero-info-horasVuelo">Horas de Vuelo: '.$avion->horas_vuelo.'</p>
                 <p class="contenedor-fichero-info-origen">Origen: '.$avion->origen.'</p>
                 <p class="contenedor-fichero-info-anio">Año de Fabricación: '.$avion->anio.'</p>
-                <p class="contenedor-fichero-info-categoria">Categoría: '.$avion->categoria.'</p>
+                <p class="contenedor-fichero-info-categoria">Categoría: '.$avion->categoria_nombre.'</p>
                 <a href="../aviones"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
             </div>
             <div class="contenedor-fichero-foto">

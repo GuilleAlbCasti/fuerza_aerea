@@ -78,4 +78,25 @@ class adminViews {
         $bases = $baseModel->getAllBase();
         require_once '../fuerza_aerea/templates/admin/showIngresoBases.php';
     }
+
+    // CREAR UNA CATEGORIA
+    function showCrearCategoria() {
+        $avionModel = new avionModel();
+        $listaCategorias = $avionModel->getAllCategoria();
+        require_once '../fuerza_aerea/templates/admin/showCrearCategoria.php';
+    }
+
+    // ELIMINAR UNA CATEGORIA
+    function showEditarCategoria($nombre_seleccionado) {
+        $avionModel = new avionModel();
+        $listaCategorias = $avionModel->getAllCategoria();
+        require_once '../fuerza_aerea/templates/admin/showEditarCategoria.php';
+    }
+
+    // ELIMINAR UNA CATEGORIA
+    function showEliminarCategoria($nombre_seleccionado) {
+        $avionModel = new avionModel();
+        $listaCategorias = $avionModel->getAllCategoria();
+        require_once '../fuerza_aerea/templates/admin/showIngresoBases.php';
+    }
 }

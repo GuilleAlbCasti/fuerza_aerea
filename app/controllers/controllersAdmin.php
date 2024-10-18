@@ -65,6 +65,24 @@ class controllersAdmin {
         $admin->showEliminarBase($id_seleccionado);
     }
 
+    //CREAR CATEGORIA
+    function controlCrearCategoria() {
+        $admin = new adminViews();
+        $admin->showCrearCategoria();
+    }
+
+    //EDITAR CATEGORIA
+    function controlEditarCategoria($nombre_seleccionado) {
+        $admin = new adminViews();
+        $admin->showEditarCategoria($nombre_seleccionado);
+    }
+    
+    //ELIMINAR CATEGORIA
+    function controlEliminarCategoria($nombre_seleccionado) {
+        $admin = new adminViews();
+        $admin->showEliminarCategoria($nombre_seleccionado);
+    }
+
 
 }
 

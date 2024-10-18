@@ -7,7 +7,7 @@ require_once __DIR__ . '/../app/views/categoriaViews.php';
 
 echo '<main>
         <div class="main-listados">
-            <h2 class="main-listados-titulo">Listado de Categoria "'.$nombre_selecionado.'"</h2>
+            <h2 class="main-listados-titulo">Listado de Categoria "'.$categoria->nombre.'"</h2>
             <table class="main-listados-tabla">
                 <thead>
                     <tr>

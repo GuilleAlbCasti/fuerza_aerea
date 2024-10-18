@@ -33,10 +33,10 @@ class controllersUsers {
         $aviones->showAvion($id_selecionado);
     } 
     
-    function controlCategoria($nombre_selecionado) {
+    function controlCategoria($id_selecionado) {
         require_once __DIR__ .'/../views/categoriaViews.php';
         $categoria = new categoriaViews();
-        $categoria->showCategoria($nombre_selecionado);
+        $categoria->showCategoria($id_selecionado);
     }
     
 }

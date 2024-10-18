@@ -20,7 +20,7 @@ echo '
                     echo '
                     <tr>  
                         <td><a href="avion/?id='.$avion->id.'">'.$avion->modelo.'</a></td>
-                        <td><a href="avion/?id='.$avion->id.'">'.$avion->categoria.'</a></td>
+                        <td><a href="avion/?id='.$avion->id.'">'.$avion->categoria_nombre.'</a></td>
                         <td><a href="avion/?id='.$avion->id.'">'.$avion->base_nombre.'</a></td>
                     </tr>';
                 }; 

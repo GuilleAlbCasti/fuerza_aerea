@@ -85,38 +85,26 @@ switch($params[0]) {
                     }
                     break;
                 case 'categorias':
-                //     if (isset($params[2])) {
-                //         switch ($params[2]) {
-                //             case 'agregar':
-                //                 $admin->controlAgregarCategoria();
-                //                 break;
-                //             case 'editar':
-                //                 if (isset($params[3])) {
-                //                     $admin->controlEditarCategoria($params[3]);
-                //                 } else {
-                //                     $admin->controlIngresoCategorias();
-                //                 }
-                //                 break;
-                //             case 'eliminar':
-                //                 if (isset($params[3])) {
-                //                     $admin->controlEliminarCategoria($params[3]);
-                //                 } else {
-                //                     $admin->controlIngresoCategorias();
-                //                 }
-                //                 break;
-                //             default:
-                //                 $admin->controlIngresoCategorias();
-                //                 break;
-                //         }
-                //     } else {
-                //         $admin->controlIngresoCategorias();
-                //     }
-                //     break;
-                // default:
-                //     $admin->controlIngreso();
-                $admin->controlIngresoCategorias();
-                break;
-            }
+                    if (isset($params[2])) {
+                        switch ($params[2]) {
+                            case 'agregar':
+                               $admin->controlCrearCategoria();
+                               break;
+                            case 'editar':
+                               $admin->controlEditarCategoria($params[3]);
+                               break;
+                            case 'eliminar':
+                               $admin->controlEliminarCategoria($params[3]);
+                               break;
+                            default:
+                               $admin->controlIngresoCategorias();
+                               break;
+                        }
+                    } else {
+                       $admin->controlIngresoCategorias();
+                    }
+                    break;
+                }
         } else {
             $admin->controlIngreso();
         }
@@ -125,11 +113,3 @@ switch($params[0]) {
         echo("La página no existe. Error 404");
         break;
 }
-
-
-
-
-
-
-
-
