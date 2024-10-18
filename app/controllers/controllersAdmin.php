@@ -47,6 +47,24 @@ class controllersAdmin {
         $admin->showEliminarAvion($id_seleccionado);
     }
 
+    //CREAR BASE
+    function controlCrearBase() {
+        $admin = new adminViews();
+        $admin->showCrearBase();
+    }
+
+    //EDITAR BASE
+    function controlEditarBase($id_seleccionado) {
+        $admin = new adminViews();
+        $admin->showEditarBase($id_seleccionado);
+    }
+    
+    //ELIMINAR BASE
+    function controlEliminarBase($id_seleccionado) {
+        $admin = new adminViews();
+        $admin->showEliminarBase($id_seleccionado);
+    }
+
 
 }
 

@@ -11,7 +11,7 @@ echo '
             <div class="main-ingreso-encabezado">
                 <h2 class="main-listados-titulo, main-ingreso-encabezado-titulo">DATOS DE BASES</h2>
                 <div class="main-listados-encabezado-botones"> 
-                    <a href="#"><p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">AGREGAR</p></a>
+                    <a href="/fuerza_aerea/ingreso/bases/agregar"><p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">AGREGAR</p></a>
                 </div>  
             </div>
             <table class="main-listados-tabla">
@@ -34,10 +34,10 @@ echo '
                                 <td>'.$base->ubicacion.'</td>
                                 <td>'.$base->capacidad.'</td>
                                 <td id="columna-botones">
-                                    <a href="avion/?id='.$base->id.'">
+                                    <a href="/fuerza_aerea/ingreso/bases/editar/'.$base->id.'">
                                         <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">EDITAR</p>
                                     </a>
-                                    <a href="avion/?id='.$base->id.'">
+                                    <a href="/fuerza_aerea/ingreso/bases/eliminar/'.$base->id.'">
                                         <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">ELIMINAR</p>
                                     </a>
                                 </td>

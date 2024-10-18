@@ -45,34 +45,25 @@ switch($params[0]) {
         if (isset($params[1])) {
             switch ($params[1]) {
                 case 'bases':
-                    // if (isset($params[2])) {
-                    //     switch ($params[2]) {
-                    //         case 'agregar':
-                    //             $admin->controlAgregarBase();
-                    //             break;
-                    //         case 'editar':
-                    //             if (isset($params[3])) {
-                    //                 $admin->controlEditarBase($params[3]); // $params[3] sería el ID de la base
-                    //             } else {
-                    //                 $admin->controlIngresoBases();
-                    //             }
-                    //             break;
-                    //         case 'eliminar':
-                    //             if (isset($params[3])) {
-                    //                 $admin->controlEliminarBase($params[3]);
-                    //             } else {
-                    //                 $admin->controlIngresoBases();
-                    //             }
-                    //             break;
-                    //         default:
-                    //             $admin->controlIngresoBases();
-                    //             break;
-                    //     }
-                    // } else {
-                    //     $admin->controlIngresoBases();
-                    // }
-                    $admin->controlIngresoBases();
-                    break;
+                    if (isset($params[2])) {
+                        switch ($params[2]) {
+                            case 'agregar':
+                               $admin->controlCrearBase();
+                               break;
+                            case 'editar':
+                               $admin->controlEditarBase($params[3]);
+                               break;
+                            case 'eliminar':
+                               $admin->controlEliminarBase($params[3]);
+                               break;
+                            default:
+                               $admin->controlIngresoBases();
+                               break;
+                        }
+                   } else {
+                       $admin->controlIngresoBases();
+                   }
+                   break;
                 case 'aviones':
                     if (isset($params[2])) {
                          switch ($params[2]) {
