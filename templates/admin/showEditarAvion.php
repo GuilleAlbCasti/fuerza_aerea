@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $origen = $_POST['origen'];
     $horas_vuelo = $_POST['horas_vuelo'];
     $base_fk = $_POST['base_fk'];
-    $categoria = $_POST['categoria'];
+    $categoria_fk = $_POST['categoria_fk'];
 
-    $avionModel->editarAvion($id_avion,$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria);
+    $avionModel->editarAvion($id_avion,$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria_fk);
    
     header('Location: /fuerza_aerea/ingreso/aviones');
     exit();
@@ -45,11 +45,11 @@ echo '
                     echo '
                     </select>
                     <br>
-                    <label for="categoria">Categoría:</label>
-                    <select name="categoria" id="categoria" required>';
+                    <label for="categoria_fk">Categoría:</label>
+                    <select name="categoria_fk" id="categoria_fk" required>';
                     foreach ($listaCategorias as $categoria) {
-                        $selected = $avionSeleccionado && $avionSeleccionado->categoria == $categoria->categoria ? 'selected' : '';
-                        echo '<option value="'.$categoria->categoria.'" '.$selected.'>'.$categoria->categoria.'</option>';
+                        $selected = $avionSeleccionado && $avionSeleccionado->categoria_fk == $categoria->id ? 'selected' : '';
+                        echo '<option value="'.$categoria->id.'" '.$selected.'>'.$categoria->nombre.'</option>';
                     }
                     echo '
                     </select>

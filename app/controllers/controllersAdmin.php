@@ -72,15 +72,15 @@ class controllersAdmin {
     }
 
     //EDITAR CATEGORIA
-    function controlEditarCategoria($nombre_seleccionado) {
+    function controlEditarCategoria($id_seleccionada) {
         $admin = new adminViews();
-        $admin->showEditarCategoria($nombre_seleccionado);
+        $admin->showEditarCategoria($id_seleccionada);
     }
     
     //ELIMINAR CATEGORIA
-    function controlEliminarCategoria($nombre_seleccionado) {
+    function controlEliminarCategoria($id_seleccionada) {
         $admin = new adminViews();
-        $admin->showEliminarCategoria($nombre_seleccionado);
+        $admin->showEliminarCategoria($id_seleccionada);
     }
 
 

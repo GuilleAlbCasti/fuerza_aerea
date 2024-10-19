@@ -19,7 +19,7 @@ class categoriaModel {
 
     // OBTENER NOMBRE DE 1 CATEGORIA
     public function getCategoria($id) {
-        $query = $this->db->prepare('SELECT nombre FROM categoria WHERE id = ?');
+        $query = $this->db->prepare('SELECT * FROM categoria WHERE id = ?');
         $query->execute([$id]);
         return $query->fetch(PDO::FETCH_OBJ);
     }
@@ -30,7 +30,6 @@ class categoriaModel {
         $query->execute([$categoria_id]);
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
-
     
 
     // AGREGAR UNA CATEGORÍA

@@ -35,7 +35,7 @@ echo '
                         <td>'.$avion->anio.'</td>
                         <td>'.$avion->origen.'</td>
                         <td>'.$avion->horas_vuelo.'</td>
-                        <td>'.$avion->categoria.'</td>
+                        <td>'.$avion->categoria_nombre.'</td>
                         <td>'.$avion->base_nombre.'</td>
                         <td id="columna-botones">
                             <a href="/fuerza_aerea/ingreso/aviones/editar/'.$avion->id.'">

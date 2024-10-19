@@ -33,23 +33,23 @@ class avionModel {
     // BUSCAR AVION POR MODELO
 
     function searchAvion($letras) {
-        $query = $this->db->prepare('SELECT * FROM avion WHERE FIELD_A LIKE ?');
+        $query = $this->db->prepare('SELECT * FROM avion WHERE modelo LIKE ?');
         $query->execute(array("%$letras%"));
 
-        return $query->fetch(PDO::FETCH_OBJ);
+        return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
     // AGREGAR UN AVIÓN
 
-    function agregarAvion($modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria) {
-        $query = $this->db->prepare('INSERT INTO avion(modelo, anio, origen, horas_vuelo, base_fk, categoria) VALUES (?,?,?,?,?,?)');
-        $query->execute([$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria]);
+    function agregarAvion($modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria_fk) {
+        $query = $this->db->prepare('INSERT INTO avion(modelo, anio, origen, horas_vuelo, base_fk, categoria_fk) VALUES (?,?,?,?,?,?)');
+        $query->execute([$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria_fk]);
     }
 
     // EDITAR UN AVIÓN
-    function editarAvion($id_seleccionado, $modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria) {
-        $query = $this->db->prepare('UPDATE avion SET modelo = ?, anio = ?, origen = ?, horas_vuelo = ?, base_fk = ?, categoria = ? WHERE id = ?');
-        $query->execute([$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria, $id_seleccionado]);
+    function editarAvion($id_seleccionado, $modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria_fk) {
+        $query = $this->db->prepare('UPDATE avion SET modelo = ?, anio = ?, origen = ?, horas_vuelo = ?, base_fk = ?, categoria_fk = ? WHERE id = ?');
+        $query->execute([$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria_fk, $id_seleccionado]);
     }
 
     // ELIMINAR UN AVIÓN

@@ -10,7 +10,7 @@ echo '
         <div class="main-ingreso-encabezado">
             <h2 class="main-listados-titulo, main-ingreso-encabezado-titulo">DATOS DE CATEGORÍAS</h2>
             <div class="main-listados-encabezado-botones"> 
-                <a href="#"><p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">AGREGAR</p></a>
+                <a href="/fuerza_aerea/ingreso/categorias/agregar"><p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">AGREGAR</p></a>
             </div>  
         </div>
         <table class="main-listados-tabla">
@@ -21,15 +21,15 @@ echo '
                 </tr>
                 </thead>
             <tbody>';
-                foreach($aviones as $avion) {
+                foreach($listaCategorias as $categoria) {
                     echo '
                         <tr>
-                            <td><a href="categoria/?categoria='.$avion->categoria.'">'.$avion->categoria.'</a></td>
+                            <td><a href="categorias/'.$categoria->id.'">'.$categoria->nombre.'</a></td>
                             <td id="columna-botones">
-                                <a href="avion/?id='.$avion->categoria.'">
+                                <a href="/fuerza_aerea/ingreso/categorias/editar/'.$categoria->id.'">
                                     <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">EDITAR</p>
                                 </a>
-                                <a href="avion/?id='.$avion->categoria.'">
+                                <a href="/fuerza_aerea/ingreso/categorias/eliminar/'.$categoria->id.'">
                                     <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">ELIMINAR</p>
                                 </a>
                             </td>
