@@ -20,4 +20,5 @@
                 </div>
             </div>
         </main>';
+        
     require_once 'templates/layouts/footer.php';
