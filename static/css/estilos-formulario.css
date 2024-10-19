@@ -47,10 +47,13 @@
 
 /* Estilos específicos para el botón de envío */
 .contenedor-formulario-info input[type="submit"] {
-    background-color: rgb(237, 189, 100);
-    color: #000;
-    font-weight: bold;
+    background-color: rgb(237, 205, 100);
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
     cursor: pointer;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Efecto hover en el botón de envío */

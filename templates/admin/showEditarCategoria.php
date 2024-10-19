@@ -21,7 +21,7 @@ echo '
                     <label for="nombre">Nombre:</label>
                     <input type="text" name="nombre" id="nombre" value="'.$categoriaSeleccionada->nombre.'" required>
                     <br>
-                    <input type="submit" value="Guardar Cambios">
+                    <input type="submit" value="EDITAR">
                     <a href="/fuerza_aerea/ingreso/categorias"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
                 </form>
             </div>

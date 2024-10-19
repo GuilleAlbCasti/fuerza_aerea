@@ -30,7 +30,7 @@ echo '
                     <label for="capacidad">Capacidad:</label>
                     <input type="number" name="capacidad" id="capacidad" value="'.$baseSeleccionada->capacidad.'" required>
                     <br>
-                    <input type="submit" value="Guardar Cambios">
+                    <input type="submit" value="EDITAR">
                     <a href="/fuerza_aerea/ingreso/bases"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
                 </form>
             </div>

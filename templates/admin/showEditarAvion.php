@@ -54,7 +54,7 @@ echo '
                     echo '
                     </select>
                     <br>
-                    <input type="submit" value="Guardar Cambios">
+                    <input type="submit" value="EDITAR">
                     <a href="/fuerza_aerea/ingreso/aviones"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
                 </form>
             </div>
