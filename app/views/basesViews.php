@@ -8,8 +8,10 @@ class basesViews {
     function showBases() {
         $baseModel = new baseModel();
         $bases = $baseModel->getAllBase();
-        require_once '../fuerza_aerea/templates/showBases.php';
+        require_once '../fuerza_aerea/templates/showBases.phtml';
     }
+
+    // SE PUEDE AGREGAR UNA FUNCIÓN PARA QUE MUESTRE UNA BASE
 
  
 }

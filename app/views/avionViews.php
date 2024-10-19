@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../models/avionModel.php';
 require_once __DIR__ . '/../models/baseModel.php';
+require_once __DIR__ . '/../models/categoriaModel.php';
 
 class avionViews {
 
@@ -9,7 +10,7 @@ class avionViews {
     function showAviones() {
         $avionModel = new avionModel();
         $aviones = $avionModel->getAllAvion();
-        require_once '../fuerza_aerea/templates/showAviones.php';
+        require_once '../fuerza_aerea/templates/showAviones.phtml';
     }
 
     // MOSTRAR EL DETALLE DE 1 AVIÓN
@@ -18,20 +19,10 @@ class avionViews {
             $id_selecionado = $_GET['id'];
             $avionModel = new avionModel();
             $avion = $avionModel->getAvion($id_selecionado);
-            require_once '../fuerza_aerea/templates/showAvion.php';
+            require_once '../fuerza_aerea/templates/showAvion.phtml';
         } else {
-        require_once '../fuerza_aerea/templates/showAvionNoEncontrado.php';
+        require_once '../fuerza_aerea/templates/showAvionNoEncontrado.phtml';
         }
     }
-
-    // AGREGAR AVIÓN
-    function showAgregarAvion() {
-        $avionModel = new avionModel();
-        $baseModel = new baseModel();
-        $bases = $baseModel->getAllBase();
-        $aviones = $avionModel->getAllCategoria();
-        require_once '../fuerza_aerea/templates/showAgregarAvion.php';
-    }
-
     
 }

@@ -6,7 +6,7 @@ require_once __DIR__ . '/../models/dbModel.php';
 class controllersUsers {
     
     function controlHome() {
-        require_once 'index.php';
+        require_once 'index.phtml';
     }
     
     function controlBases() {

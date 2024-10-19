@@ -20,7 +20,8 @@ footer,
 .titulo-contenedor, 
 .opcion-contenedor, 
 .main-listados, 
-.contenedor-fichero {
+.contenedor-fichero,
+#creador {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,3 +127,10 @@ footer {
     height: 40px;
 }
 
+#creador {
+    flex-direction: row;
+}
+
+#estrellas {
+    color:rgba(247, 210, 0, 0.781)
+}

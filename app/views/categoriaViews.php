@@ -8,7 +8,7 @@ class categoriaViews {
     function showCategorias() {
         $categoriaModel = new categoriaModel();
         $categorias = $categoriaModel->getAllCategorias();
-        require_once '../fuerza_aerea/templates/showCategorias.php';
+        require_once '../fuerza_aerea/templates/showCategorias.phtml';
     }
 
     // MOSTRAR EL DETALLE DE 1 CATEGORÍA
@@ -18,9 +18,9 @@ class categoriaViews {
         if (isset($id)) {
             $categoria = $categoriaModel->getCategoria($id);
             $aviones = $categoriaModel->getAvionesPorCategoria($id);
-            require_once '../fuerza_aerea/templates/showCategoria.php';
+            require_once '../fuerza_aerea/templates/showCategoria.phtml';
         } else {
-            require_once '../fuerza_aerea/templates/showCategoriaNoEncontrada.php';
+            require_once '../fuerza_aerea/templates/showCategoriaNoEncontrada.phtml';
         }
     }
 

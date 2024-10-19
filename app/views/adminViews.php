@@ -8,28 +8,28 @@ class adminViews {
     
     // LISTAR LAS OPCIONES 
     function showIngreso() {
-        require_once '../fuerza_aerea/templates/admin/showIngreso.php';
+        require_once '../fuerza_aerea/templates/admin/showIngreso.phtml';
     }
 
     // LISTAR BASES COMO ADMINISTRADOR
     function showIngresoBases() {
         $baseModel = new baseModel();
         $bases = $baseModel->getAllBase();
-        require_once '../fuerza_aerea/templates/admin/showIngresoBases.php';
+        require_once '../fuerza_aerea/templates/admin/showIngresoBases.phtml';
     }
 
     // LISTAR AVIONES COMO ADMINISTRADOR
     function showIngresoAviones() {
         $avionModel = new avionModel();
         $aviones = $avionModel->getAllAvion();
-        require_once '../fuerza_aerea/templates/admin/showIngresoAviones.php';
+        require_once '../fuerza_aerea/templates/admin/showIngresoAviones.phtml';
     }
 
     // LISTAR CATEGORÍAS COMO ADMINISTRADOR
     function showIngresoCategorias() {
         $categoriaModel = new categoriaModel();
         $listaCategorias = $categoriaModel->getAllCategorias();
-        require_once '../fuerza_aerea/templates/admin/showIngresoCategorias.php';
+        require_once '../fuerza_aerea/templates/admin/showIngresoCategorias.phtml';
     }
 
     // CREAR UN AVION
@@ -39,7 +39,7 @@ class adminViews {
         $listaCategorias = $categoriaModel->getAllCategorias();
         $baseModel = new baseModel();
         $listaBases = $baseModel->getAllBase();
-        require_once '../fuerza_aerea/templates/admin/showCrearAvion.php';
+        require_once '../fuerza_aerea/templates/admin/showCrearAvion.phtml';
     }
 
     // EDITAR UN AVION
@@ -50,7 +50,7 @@ class adminViews {
         $baseModel = new baseModel();
         $listaBases = $baseModel->getAllBase();
         $avionSeleccionado = $avionModel->getAvion($id_seleccionado);
-        require_once '../fuerza_aerea/templates/admin/showEditarAvion.php';
+        require_once '../fuerza_aerea/templates/admin/showEditarAvion.phtml';
     }
 
     // ELIMINAR UN AVION
@@ -58,20 +58,20 @@ class adminViews {
         $avionModel = new avionModel();
         $aviones = $avionModel->eliminarAvion($id_seleccionado);
         $aviones = $avionModel->getAllAvion();
-        require_once '../fuerza_aerea/templates/admin/showIngresoAviones.php';
+        require_once '../fuerza_aerea/templates/admin/showIngresoAviones.phtml';
     }
 
     // CREAR UNA BASE
     function showCrearBase() {
         $baseModel = new baseModel();
-        require_once '../fuerza_aerea/templates/admin/showCrearBase.php';
+        require_once '../fuerza_aerea/templates/admin/showCrearBase.phtml';
     }
 
     // EDITAR UNA BASE
     function showEditarBase($id_seleccionado) {
         $baseModel = new baseModel();
         $baseSeleccionada = $baseModel->getBase($id_seleccionado);
-        require_once '../fuerza_aerea/templates/admin/showEditarBase.php';
+        require_once '../fuerza_aerea/templates/admin/showEditarBase.phtml';
     }
 
     // ELIMINAR UNA BASE
@@ -79,20 +79,20 @@ class adminViews {
         $baseModel = new baseModel();
         $baseSeleccionada = $baseModel->eliminarBase($id_seleccionado);
         $bases = $baseModel->getAllBase();
-        require_once '../fuerza_aerea/templates/admin/showIngresoBases.php';
+        require_once '../fuerza_aerea/templates/admin/showIngresoBases.phtml';
     }
 
     // CREAR UNA CATEGORIA
     function showCrearCategoria() {
         $categoriaModel = new categoriaModel();
-        require_once '../fuerza_aerea/templates/admin/showCrearCategoria.php';
+        require_once '../fuerza_aerea/templates/admin/showCrearCategoria.phtml';
     }
 
     // EDITAR UNA CATEGORIA
     function showEditarCategoria($id_seleccionada) {
         $categoriaModel = new categoriaModel();
         $categoriaSeleccionada = $categoriaModel->getCategoria($id_seleccionada);
-        require_once '../fuerza_aerea/templates/admin/showEditarCategoria.php';
+        require_once '../fuerza_aerea/templates/admin/showEditarCategoria.phtml';
     }
 
     // ELIMINAR UNA CATEGORIA
@@ -100,6 +100,6 @@ class adminViews {
         $categoriaModel = new categoriaModel();
         $categoriaSeleccionada = $categoriaModel->eliminarCategoria($id_seleccionada);
         $listaCategorias = $categoriaModel->getAllCategorias();
-        require_once '../fuerza_aerea/templates/admin/showIngresoCategorias.php';
+        require_once '../fuerza_aerea/templates/admin/showIngresoCategorias.phtml';
     }
 }
