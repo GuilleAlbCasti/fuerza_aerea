@@ -1,0 +1,33 @@
+<?php
+    require_once '../fuerza_aerea/templates/layouts/header.phtml';
+    require_once __DIR__ . '/../../app/views/authViews.php';
+?>
+
+<main>
+    <div class="contenedor-formulario">
+        <div class="contenedor-formulario-info">
+            <?php if($error): ?>
+                <div class="error-contenedor">
+                    <h2 class="error-frase"><?=$error?></h2>
+                </div>
+            <?php endif; ?>
+            <form action="/fuerza_aerea/admin/login" method="POST">
+                <label for="nombreDeUsuario">Usuario:</label>
+                <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" required>
+                <br>
+                <label for="contraseniaDeUsuario">Contraseña:</label>
+                <input type="password" name="contraseniaDeUsuario" id="contraseniaDeUsuario" required>
+                <br>
+                <input type="submit" value="INGRESAR">
+            </form>
+            <a href=""><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">REGISTRARSE</p></a>
+        </div>
+    </div>
+</main>
+
+<?php
+    require_once '../fuerza_aerea/templates/layouts/footer.phtml';
+?>
+
+
+

@@ -25,6 +25,7 @@
 .contenedor-formulario-info input[type="text"],
 .contenedor-formulario-info select[type="text"],
 .contenedor-formulario-info input[type="number"],
+.contenedor-formulario-info input[type="password"],
 .contenedor-formulario-info input[type="submit"],
 .contenedor-formulario-info select {
     padding: 10px;
@@ -40,6 +41,7 @@
 .contenedor-formulario-info input[type="text"]:hover,
 .contenedor-formulario-info select[type="text"]:hover,
 .contenedor-formulario-info input[type="number"]:hover,
+.contenedor-formulario-info input[type="password"]:hover,
 .contenedor-formulario-info select:hover  {
     background-color: #e6e6e6;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -60,4 +62,20 @@
 .contenedor-formulario-info input[type="submit"]:hover {
     background-color: rgb(196, 145, 52);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensajes de error */
+
+.error-contenedor {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(241, 86, 86, 0.685);
+    margin-bottom: 15px;
+
+}
+
+.error-frase {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
 }

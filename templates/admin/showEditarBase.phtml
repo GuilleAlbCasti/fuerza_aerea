@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $baseModel->editarBase($id, $nombre, $ubicacion, $capacidad);
    
-    header('Location: /fuerza_aerea/ingreso/bases');
+    header('Location: /fuerza_aerea/admin/bases');
     exit();
 }
 ?>
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="number" name="capacidad" id="capacidad" value="<?= $baseSeleccionada->capacidad ?>" required>
                 <br>
                 <input type="submit" value="GUARDAR">
-                <a href="/fuerza_aerea/ingreso/bases">
+                <a href="/fuerza_aerea/admin/bases">
                     <p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p>
                 </a>
             </form>

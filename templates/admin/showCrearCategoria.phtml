@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $categoriaModel->agregarCategoria($nombre);
    
-    header('Location: /fuerza_aerea/ingreso/categorias');
+    header('Location: /fuerza_aerea/admin/categorias');
     exit();
 }
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" name="nombre" id="nombre" required>
                 <br>
                 <input type="submit" value="AGREGAR">
-                <a href="/fuerza_aerea/ingreso/categorias"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
+                <a href="/fuerza_aerea/admin/categorias"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
             </form>
         </div>
     </div>

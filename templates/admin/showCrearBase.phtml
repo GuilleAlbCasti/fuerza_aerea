@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $baseModel->agregarBase($nombre, $ubicacion, $capacidad);
    
-    header('Location: /fuerza_aerea/ingreso/bases');
+    header('Location: /fuerza_aerea/admin/bases');
     exit();
 }
 ?>
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" name="capacidad" id="capacidad" required>
                 <br>
                 <input type="submit" value="AGREGAR">
-                <a href="/fuerza_aerea/ingreso/bases"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
+                <a href="/fuerza_aerea/admin/bases"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
             </form>
         </div>
     </div>

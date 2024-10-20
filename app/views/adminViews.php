@@ -5,6 +5,12 @@ require_once __DIR__ . '/../models/baseModel.php';
 require_once __DIR__ . '/../models/categoriaModel.php';
 
 class adminViews {
+
+    private $user;
+
+    public function __construct($user){
+        $this->user = $user;
+    }
     
     // LISTAR LAS OPCIONES 
     function showIngreso() {

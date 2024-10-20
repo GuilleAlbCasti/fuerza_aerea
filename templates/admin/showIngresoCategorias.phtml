@@ -9,8 +9,14 @@ require_once __DIR__ . '/../../app/views/adminViews.php';
         <div class="main-ingreso-encabezado">
             <h2 class="main-listados-titulo main-ingreso-encabezado-titulo">DATOS DE CATEGORÍAS</h2>
             <div class="main-listados-encabezado-botones"> 
-                <a href="/fuerza_aerea/ingreso/categorias/agregar">
+                <a href="/fuerza_aerea/admin/categorias/agregar">
                     <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">AGREGAR</p>
+                </a>
+                <a href="/fuerza_aerea/admin">
+                    <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">DATOS</p>
+                </a>
+                <a href="/fuerza_aerea/admin/logout">
+                    <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador">SALIR</p>
                 </a>
             </div>  
         </div>
@@ -26,10 +32,10 @@ require_once __DIR__ . '/../../app/views/adminViews.php';
                     <tr>
                         <td><a href="/fuerza_aerea/categoria/<?= $categoria->id ?>"><?= $categoria->nombre ?></a></td>
                         <td id="columna-botones">
-                            <a href="/fuerza_aerea/ingreso/categorias/editar/<?= $categoria->id ?>">
+                            <a href="/fuerza_aerea/admin/categorias/editar/<?= $categoria->id ?>">
                                 <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">EDITAR</p>
                             </a>
-                            <a href="/fuerza_aerea/ingreso/categorias/eliminar/<?= $categoria->id ?>">
+                            <a href="/fuerza_aerea/admin/categorias/eliminar/<?= $categoria->id ?>">
                                 <p class="contenedor-fichero-info-volver" id="boton-encabezado-administrador-listado">ELIMINAR</p>
                             </a>
                         </td>

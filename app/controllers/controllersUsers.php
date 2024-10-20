@@ -1,9 +1,22 @@
 <?php
 
 require_once __DIR__ . '/../models/dbModel.php';
+require_once __DIR__ .'/../views/basesViews.php';
+require_once __DIR__ .'/../views/avionViews.php';
+require_once __DIR__ .'/../views/categoriaViews.php';
 
 
 class controllersUsers {
+
+    private $bases;
+    private $aviones;
+    private $categoria;
+
+    function __construct() {
+        $this->bases = new basesViews();
+        $this->aviones = new avionViews();
+        $this->categoria = new categoriaViews();
+    }
     
     function controlHome() {
         require_once 'index.phtml';
@@ -11,32 +24,27 @@ class controllersUsers {
     
     function controlBases() {
         require_once __DIR__ . '/../views/basesViews.php';
-        $bases = new basesViews();
-        $bases->showBases();
+        $this->bases->showBases();
     }
     
     function controlAviones() {
         require_once __DIR__ .'/../views/avionViews.php';
-        $aviones = new avionViews();
-        $aviones->showAviones();
+        $this->aviones->showAviones();
     } 
     
     function controlCategorias() {
         require_once __DIR__ .'/../views/categoriaViews.php';
-        $categoria = new categoriaViews();
-        $categoria->showCategorias();
+        $this->categoria->showCategorias();
     } 
     
     function controlAvion($id_selecionado) {
         require_once __DIR__ .'/../views/avionViews.php';
-        $aviones = new avionViews();
-        $aviones->showAvion($id_selecionado);
+        $this->aviones->showAvion($id_selecionado);
     } 
     
     function controlCategoria($id_selecionado) {
         require_once __DIR__ .'/../views/categoriaViews.php';
-        $categoria = new categoriaViews();
-        $categoria->showCategoria($id_selecionado);
+        $this->categoria->showCategoria($id_selecionado);
     }
     
 }

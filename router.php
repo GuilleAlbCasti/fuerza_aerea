@@ -1,10 +1,15 @@
 <?php
-
+require_once __DIR__ . '/libs/response.php';
+require_once __DIR__ . '/app/middlewares/sessionAuthMiddleware.php';
 require_once __DIR__ . '/app/controllers/controllersUsers.php';
 require_once __DIR__ . '/app/controllers/controllersAdmin.php';
+require_once __DIR__ . '/app/controllers/controllersAuth.php';
+
+$res = new Response();
 
 $usuario = new controllersUsers();
-$admin = new controllersAdmin();
+$admin = new controllersAdmin($res);
+$auth = new controllersAuth($res);
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -14,7 +19,7 @@ if (!empty($_GET['action'])) {
 
 $params = explode('/', $action);
 
-switch($params[0]) {
+switch ($params[0]) {
     case 'home':
         $usuario->controlHome();
         break;
@@ -41,46 +46,65 @@ switch($params[0]) {
             $usuario->controlHome();
         }
         break;
-    case 'ingreso':
+    case 'admin':
         if (isset($params[1])) {
             switch ($params[1]) {
+                case 'controlLogin':
+                    $auth->controlLogin();
+                    break;
+                case 'login':
+                    $auth->login();
+                    break;
+                case 'logout':
+                    $auth->logout();
+                    break;
                 case 'bases':
                     if (isset($params[2])) {
                         switch ($params[2]) {
                             case 'agregar':
-                               $admin->controlCrearBase();
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlCrearBase();
+                                break;
                             case 'editar':
-                               $admin->controlEditarBase($params[3]);
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlEditarBase($params[3]);
+                                break;
                             case 'eliminar':
-                               $admin->controlEliminarBase($params[3]);
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlEliminarBase($params[3]);
+                                break;
                             default:
-                               $admin->controlIngresoBases();
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlIngresoBases();
+                                break;
                         }
-                   } else {
-                       $admin->controlIngresoBases();
-                   }
-                   break;
+                    } else {
+                        sessionAuthMiddleware($res);
+                        $admin->controlIngresoBases();
+                    }
+                    break;
                 case 'aviones':
                     if (isset($params[2])) {
-                         switch ($params[2]) {
-                             case 'agregar':
+                        switch ($params[2]) {
+                            case 'agregar':
+                                sessionAuthMiddleware($res);
                                 $admin->controlCrearAvion();
                                 break;
-                             case 'editar':
+                            case 'editar':
+                                sessionAuthMiddleware($res);
                                 $admin->controlEditarAvion($params[3]);
                                 break;
-                             case 'eliminar':
+                            case 'eliminar':
+                                sessionAuthMiddleware($res);
                                 $admin->controlEliminarAvion($params[3]);
                                 break;
-                             default:
+                            default:
+                                sessionAuthMiddleware($res);
                                 $admin->controlIngresoAviones();
                                 break;
-                         }
+                        }
                     } else {
+                        sessionAuthMiddleware($res);
                         $admin->controlIngresoAviones();
                     }
                     break;
@@ -88,24 +112,30 @@ switch($params[0]) {
                     if (isset($params[2])) {
                         switch ($params[2]) {
                             case 'agregar':
-                               $admin->controlCrearCategoria();
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlCrearCategoria();
+                                break;
                             case 'editar':
-                               $admin->controlEditarCategoria($params[3]);
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlEditarCategoria($params[3]);
+                                break;
                             case 'eliminar':
-                               $admin->controlEliminarCategoria($params[3]);
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlEliminarCategoria($params[3]);
+                                break;
                             default:
-                               $admin->controlIngresoCategorias();
-                               break;
+                                sessionAuthMiddleware($res);
+                                $admin->controlIngresoCategorias();
+                                break;
                         }
                     } else {
-                       $admin->controlIngresoCategorias();
+                        sessionAuthMiddleware($res);
+                        $admin->controlIngresoCategorias();
                     }
                     break;
-                }
+            }
         } else {
+            sessionAuthMiddleware($res);
             $admin->controlIngreso();
         }
         break;

@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $avionModel->editarAvion($id_avion,$modelo, $anio, $origen, $horas_vuelo, $base_fk, $categoria_fk);
    
-    header('Location: /fuerza_aerea/ingreso/aviones');
+    header('Location: /fuerza_aerea/admin/aviones');
     exit();
 }
 ?>
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </select>
                 <br>
                 <input type="submit" value="GUARDAR">
-                <a href="/fuerza_aerea/ingreso/aviones"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
+                <a href="/fuerza_aerea/admin/aviones"><p class="contenedor-fichero-info-volver" id="boton-fichero-info-volver">VOLVER</p></a>
             </form>
         </div>
     </div>
