@@ -26,7 +26,7 @@ La temática elegida crea un marco "ficticio" en donde se logre aplicar los dist
     Modifica el archivo de configuración (por ejemplo, config.php) para establecer la conexión a la base de datos. Asegúrate de que las credenciales (nombre de usuario, contraseña y nombre de la base de datos) sean correctas y se correspondan con la configuración de tu servidor MySQL.
     Probar la Aplicación:
 
-    Una vez que todo esté configurado, accede a tu sitio web a través del navegador utilizando la dirección de tu servidor (por ejemplo, http://tu_dominio.com o http://localhost/mi_proyecto).
+    Una vez que todo esté configurado, accede a tu sitio web a través del navegador utilizando la dirección de tu servidor (por ejemplo, http://tu_dominio.com o http://localhost/fuerza_aerea).
     Verifica que todas las funcionalidades estén operativas y que no haya errores en la conexión a la base de datos.
   
   - Solución de Problemas:
