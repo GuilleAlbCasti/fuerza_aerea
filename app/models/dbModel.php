@@ -98,6 +98,18 @@ INSERT INTO `avion` (`id`, `modelo`, `anio`, `origen`, `horas_vuelo`, `base_fk`,
 (38, 'Boeing KC-135 Strato', 1967, 'Estados Unidos', 11000, 6, 12),
 (39, 'FMA IA-38 Naranjero', 1960, 'Argentina', 5000, 2, 13),
 (40, 'SIAI-Marchetti SM-10', 1970, 'Italia', 7500, 3, 1);
+
+CREATE TABLE `usuario` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `nombre` varchar(50) NOT NULL,
+    `password` varchar(60) NOT NULL,
+    `email` varchar(250) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `usuario` (`id`, `nombre`, `password`, `email`) VALUES
+(1, 'webadmin', '$2y$10$7WWJ5F4ksbjEhlJdzPWGNO9JM1NsZp12OuoH/ZZ.wVM...', 'webadmin@gmail.com');
+
 END;
       $this->db->exec($sql);
     }
